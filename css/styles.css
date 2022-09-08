@@ -27,16 +27,6 @@
   --timingfunction: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Animacje */
-/* @keyframes overlayAnim {
-  0% {
-    transform: translatey(100%);
-  }
-  100% {
-    transform: translatey(0);
-  }
-} */
-
 h1,
 h2,
 h3,
@@ -457,6 +447,9 @@ pre {
   background-color: #00000033;
   align-items: center;
   justify-content: center;
+  transition: opacity 500ms ease-in-out, visibility 500ms ease-in-out;
+  opacity: 1;
+  visibility: visible;
 }
 
 .modal {
@@ -511,12 +504,12 @@ pre {
   font-size: 16px;
   line-height: 1.62;
   text-align: center;
-  background: var(--softgray-color);
+  background-color: var(--softgray-color);
   border-radius: 4px;
   border-width: 0;
   padding: 6px 22px;
   letter-spacing: 0.03em;
-  transition: background var(--duration) var(--timingfunction),
+  transition: background-color var(--duration) var(--timingfunction),
     box-shadow var(--duration) var(--timingfunction),
     color var(--duration) var(--timingfunction);
 }
@@ -524,7 +517,7 @@ pre {
 .filter__button:hover,
 .filter__button:active,
 .filter__button:focus {
-  background: var(--main-color);
+  background-color: var(--main-color);
   box-shadow: var(--shadow-middle);
   color: var(--white);
 }
