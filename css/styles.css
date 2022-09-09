@@ -136,6 +136,10 @@ pre {
   color: var(--main-color);
 }
 
+.link-active a {
+  color: var(--main-color);
+}
+
 .link-active::after {
   content: "";
   position: absolute;
